@@ -15,6 +15,15 @@
         margin: 0;
         font-family: Roboto, "Helvetica Neue", sans-serif;
       }
+
+      * {
+        -webkit-user-select: none;
+        -moz-user-select: none;
+        -ms-user-select: none;
+        user-select: none;
+        -webkit-touch-callout: none;
+        -webkit-tap-highlight-color: transparent;
+      }
       /*!
 
  =========================================================
@@ -43621,6 +43630,16 @@
     </footer>
 
     <script>
+      document.addEventListener("contextmenu", (event) => event.preventDefault());
+      document.addEventListener("copy", (event) => event.preventDefault());
+      document.addEventListener("selectstart", (event) => event.preventDefault());
+      document.addEventListener("keydown", (event) => {
+        const bloqueado = ["c", "C", "x", "X", "a", "A", "s", "S", "p", "P"];
+        if ((event.ctrlKey || event.metaKey) && bloqueado.includes(event.key)) {
+          event.preventDefault();
+        }
+      });
+
       function calcularIdade(dataNascimento, dataReferencia) {
         let anos = dataReferencia.getFullYear() - dataNascimento.getFullYear();
         let meses = dataReferencia.getMonth() - dataNascimento.getMonth();
