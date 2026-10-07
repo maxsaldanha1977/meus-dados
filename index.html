@@ -42919,6 +42919,96 @@
         border-color: #16865b;
       }
 
+      main.container .list-group-item .emergency-contact-whatsapp {
+        display: inline-flex;
+        align-items: center;
+        justify-content: center;
+        position: relative;
+        width: 40px;
+        height: 40px;
+        min-width: 40px;
+        min-height: 40px;
+        padding: 0;
+        flex: 0 0 40px;
+        border: 0;
+        border-radius: 50%;
+        background: transparent;
+      }
+
+      main.container .list-group-item .emergency-contact-whatsapp-popover {
+        position: absolute;
+        right: 0;
+        bottom: calc(100% + 10px);
+        z-index: 10;
+        width: max-content;
+        max-width: min(220px, calc(100vw - 2rem));
+        padding: 0.5rem 0.75rem;
+        border: 1px solid #d7e2e8;
+        border-radius: 0.5rem;
+        background: #ffffff;
+        box-shadow: 0 0.25rem 0.75rem rgba(25, 45, 60, 0.16);
+        color: var(--document-ink);
+        font-size: 0.875rem;
+        font-weight: 400;
+        line-height: 1.4;
+        opacity: 0;
+        pointer-events: none;
+        transform: translateY(4px);
+        transition:
+          opacity 0.15s ease,
+          transform 0.15s ease;
+        visibility: hidden;
+      }
+
+      main.container .list-group-item .emergency-contact-whatsapp-popover::after {
+        position: absolute;
+        right: 12px;
+        top: 100%;
+        border: 6px solid transparent;
+        border-top-color: #d7e2e8;
+        content: "";
+      }
+
+      main.container
+        .list-group-item
+        .emergency-contact-whatsapp:hover
+        .emergency-contact-whatsapp-popover,
+      main.container
+        .list-group-item
+        .emergency-contact-whatsapp:focus-visible
+        .emergency-contact-whatsapp-popover {
+        opacity: 1;
+        transform: translateY(0);
+        visibility: visible;
+      }
+
+      main.container
+        .list-group-item
+        .emergency-contact-whatsapp:hover
+        .emergency-contact-whatsapp-popover::after,
+      main.container
+        .list-group-item
+        .emergency-contact-whatsapp:focus-visible
+        .emergency-contact-whatsapp-popover::after {
+        border-top-color: #ffffff;
+      }
+
+      @media (max-width: 575.98px) {
+        main.container
+          .list-group-item
+          .emergency-contact-whatsapp-popover {
+          right: auto;
+          left: 0;
+        }
+
+        main.container
+          .list-group-item
+          .emergency-contact-whatsapp-popover::after {
+          right: auto;
+          left: 12px;
+        }
+      }
+
       .document-footer {
         font-size: 0.75rem;
       }
@@ -43390,6 +43480,9 @@
           <h2 class="h5 text-primary border-bottom pb-2 mb-3">
             📞 Contatos de Emergência
           </h2>
+          <span id="whatsapp-popover-description" class="visually-hidden"
+            >Clique para entrar em contato</span
+          >
           <ul class="list-group">
             <li
               class="list-group-item d-flex flex-column flex-sm-row align-items-sm-center justify-content-between gap-2"
@@ -43416,16 +43509,23 @@
                 <span class="text-muted small">Irmã</span>
               </div>
               <a
-                class="btn btn-outline-success btn-sm align-self-start align-self-sm-center"
+                class="btn btn-outline-success emergency-contact-whatsapp align-self-start align-self-sm-center"
                 href="https://wa.me/5521982106130"
                 target="_blank"
                 rel="noopener noreferrer"
+                aria-describedby="whatsapp-popover-description"
                 aria-label="Enviar mensagem pelo WhatsApp para Jaqueline Saldanha"
+                title="Clique para entrar em contato"
               >
+                <span
+                  class="emergency-contact-whatsapp-popover"
+                  aria-hidden="true"
+                  >Clique para entrar em contato</span
+                >
                 <svg
                   xmlns="http://www.w3.org/2000/svg"
-                  width="18"
-                  height="18"
+                  width="24"
+                  height="24"
                   viewBox="0 0 24 24"
                   aria-hidden="true"
                 >
@@ -43465,16 +43565,23 @@
                 <span class="text-muted small">Irmão</span>
               </div>
               <a
-                class="btn btn-outline-success btn-sm align-self-start align-self-sm-center"
+                class="btn btn-outline-success emergency-contact-whatsapp align-self-start align-self-sm-center"
                 href="https://wa.me/5521979799820"
                 target="_blank"
                 rel="noopener noreferrer"
+                aria-describedby="whatsapp-popover-description"
                 aria-label="Enviar mensagem pelo WhatsApp para Leandro Sousa"
+                title="Clique para entrar em contato"
               >
+                <span
+                  class="emergency-contact-whatsapp-popover"
+                  aria-hidden="true"
+                  >Clique para entrar em contato</span
+                >
                 <svg
                   xmlns="http://www.w3.org/2000/svg"
-                  width="18"
-                  height="18"
+                  width="24"
+                  height="24"
                   viewBox="0 0 24 24"
                   aria-hidden="true"
                 >
@@ -43514,16 +43621,23 @@
                 <span class="text-muted small">Mãe</span>
               </div>
               <a
-                class="btn btn-outline-success btn-sm align-self-start align-self-sm-center"
+                class="btn btn-outline-success emergency-contact-whatsapp align-self-start align-self-sm-center"
                 href="https://wa.me/5521985323281"
                 target="_blank"
                 rel="noopener noreferrer"
+                aria-describedby="whatsapp-popover-description"
                 aria-label="Enviar mensagem pelo WhatsApp para Marivalda Saldanha"
+                title="Clique para entrar em contato"
               >
+                <span
+                  class="emergency-contact-whatsapp-popover"
+                  aria-hidden="true"
+                  >Clique para entrar em contato</span
+                >
                 <svg
                   xmlns="http://www.w3.org/2000/svg"
-                  width="18"
-                  height="18"
+                  width="24"
+                  height="24"
                   viewBox="0 0 24 24"
                   aria-hidden="true"
                 >
@@ -43563,16 +43677,23 @@
                 <span class="text-muted small">Irmão</span>
               </div>
               <a
-                class="btn btn-outline-success btn-sm align-self-start align-self-sm-center"
+                class="btn btn-outline-success emergency-contact-whatsapp align-self-start align-self-sm-center"
                 href="https://wa.me/5521983468223"
                 target="_blank"
                 rel="noopener noreferrer"
+                aria-describedby="whatsapp-popover-description"
                 aria-label="Enviar mensagem pelo WhatsApp para Thiago Ferreira De Souza"
+                title="Clique para entrar em contato"
               >
+                <span
+                  class="emergency-contact-whatsapp-popover"
+                  aria-hidden="true"
+                  >Clique para entrar em contato</span
+                >
                 <svg
                   xmlns="http://www.w3.org/2000/svg"
-                  width="18"
-                  height="18"
+                  width="24"
+                  height="24"
                   viewBox="0 0 24 24"
                   aria-hidden="true"
                 >
