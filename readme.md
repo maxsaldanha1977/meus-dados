@@ -7,6 +7,7 @@ e em situações de emergência.
 
 - Dados pessoais e profissionais de saúde.
 - Diagnósticos e condições clínicas.
+- Síntese dos resultados da avaliação neuropsicológica e encaminhamentos.
 - Características e necessidades de apoio.
 - Orientações para atendimento em saúde ou situações de crise.
 - Contatos de emergência.
