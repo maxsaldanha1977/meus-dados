@@ -43011,6 +43011,10 @@
           padding: 1.125rem;
         }
 
+        .document-header-details .badge {
+          white-space: normal;
+        }
+
         .document-header-layout {
           gap: 1rem;
         }
